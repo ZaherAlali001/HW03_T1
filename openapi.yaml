@@ -1,0 +1,59 @@
+swagger: "2.0"
+info:
+  title: myAPI
+  description: API for calc
+  version: 1.0.0
+
+host: myapi.apigateway.hw03proj.cloud.goog
+basePath: /
+schemes:
+  - https
+  - http
+paths:
+  /add:
+    get:
+      operationId: addOperation
+      summary: Perform addition operation
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+      x-google-backend:
+        address: https://us-central1-hw03proj.cloudfunctions.net/add
+
+  /sub:
+    get:
+      operationId: subOperation
+      summary: Perform subtraction operation
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+      x-google-backend:
+        address: https://us-central1-hw03proj.cloudfunctions.net/sub
+
+  /mul:
+    get:
+      operationId: mulOperation
+      summary: Perform multiplication operation
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+      x-google-backend:
+        address: https://us-central1-hw03proj.cloudfunctions.net/mul
+
+  /div:
+    get:
+      operationId: divOperation
+      summary: Perform division operation
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+      x-google-backend:
+        address: https://us-central1-hw03proj.cloudfunctions.net/div
